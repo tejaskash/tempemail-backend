@@ -33,7 +33,8 @@ jobs:
     - name: Deploy To Dev
       uses: easingthemes/ssh-deploy@v2.2.11
       with: 
-        SSH_PRIVATE_KEY: ${PRIVATE_KEY}
-        REMOTE_USER: tejas
-        SOURCE: ${SCP_SOURCE}
-        TARGET: ${SCP_TARGET}
+        SSH_PRIVATE_KEY: ${{secrets.PRIVATE_KEY}}
+        REMOTE_USER: ${{secrets.REMOTE_USER}}
+        REMOTE_HOST: ${{secrets.REMOTE_HOST}}
+        SOURCE: ${{secrets.SCP_SOURCE}}
+        TARGET: ${{secrets.SCP_TARGET}}
