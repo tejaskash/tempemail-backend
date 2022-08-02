@@ -20,7 +20,7 @@ public class GetMailController {
     GetMailAdapter getMailAdapter;
 
     @GetMapping(value = "/mail/{s3ObjectId}", produces = MediaType.APPLICATION_JSON_VALUE)
-    @CrossOrigin(origins = "http://localhost:3000")
+    @CrossOrigin(origins = "*")
     public ResponseEntity<GetMailResponse> getMail(@PathVariable String s3ObjectId) {
         log.info("Retrieving s3ObjectId :"+ s3ObjectId);
         try {

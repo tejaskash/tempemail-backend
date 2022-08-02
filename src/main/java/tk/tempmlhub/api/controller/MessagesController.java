@@ -20,7 +20,7 @@ public class MessagesController {
 
     @PostMapping(value = "/messages", consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)
-    @CrossOrigin(origins = "http://localhost:3000")
+    @CrossOrigin(origins = "*")
     public ResponseEntity<PollMessageResponse> pollForMessages(@RequestBody PollMessageRequest pollMessageRequest) {
         log.info("Polling messages for: " + pollMessageRequest.getEmailId());
         try {

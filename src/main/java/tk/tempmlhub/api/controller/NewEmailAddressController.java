@@ -21,7 +21,7 @@ public class NewEmailAddressController {
     private NewMailAdapter newMailAdapter;
 
     @GetMapping("/newmail")
-    @CrossOrigin(origins = "http://localhost:3000")
+    @CrossOrigin(originPatterns = "*")
     public ResponseEntity<NewEmailAddress> getNewEmailAddress() {
         NewEmailAddress newEmailAddress;
         log.info("Creating new email address");
